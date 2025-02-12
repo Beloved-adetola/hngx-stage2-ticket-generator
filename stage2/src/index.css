@@ -1,0 +1,46 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cancel-button,
+.back-button,
+.book-another-button {
+  display: flex;
+  padding: var(--Radius-reg-2, 12px) var(--Radius-semi, 24px);
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex: 1 0 0;
+  border-radius: var(--Radius-reg, 8px);
+  border: 1px solid #24a0b5;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.cancel-button:hover,
+.back-button:hover,
+.book-another-button:hover {
+  background: #24a0b5;
+}
+
+.next-button,
+.submit-button,
+.download-button {
+  display: flex;
+  padding: var(--Radius-reg-2, 12px) var(--Radius-semi, 24px);
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex: 1 0 0;
+  border-radius: var(--Radius-reg, 8px);
+  background: #24a0b5;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.next-button:hover,
+.submit-button:hover, .download-button:hover {
+  background: transparent;
+  border: 1px solid #24a0b5;
+}
+
