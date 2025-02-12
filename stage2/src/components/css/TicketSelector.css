@@ -190,8 +190,8 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-.ticket-card:hover{
-    background: #24a0b5;
+.ticket-card:hover {
+  background: #24a0b5;
 }
 
 .ticket-type {
@@ -277,5 +277,3 @@
   align-items: flex-end;
   gap: 24px;
 }
-
-

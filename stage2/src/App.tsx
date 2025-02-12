@@ -1,15 +1,11 @@
-import Form from "./components/Form"
-import TicketGenerator from "./components/TicketGenerator"
-import TicketSelector from "./components/TicketSelector"
+import Form from "./components/Form";
 
 function App() {
   return (
     <>
-      {/* <TicketSelector /> */}
       <Form />
-      {/* <TicketGenerator/> */}
     </>
-  )
+  );
 }
 
-export default App
+export default App;

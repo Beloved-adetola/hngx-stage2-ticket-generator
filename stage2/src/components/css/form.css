@@ -35,7 +35,7 @@
   flex: 1;
   color: white;
   font-size: 32px;
-  font-family: 'JejuMyeongjo', sans-serif;
+  font-family: "JejuMyeongjo", sans-serif;
   font-weight: 400;
   word-wrap: break-word;
 }
@@ -43,7 +43,7 @@
 .header-step {
   color: #fafafa;
   font-size: 16px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   line-height: 24px;
   word-wrap: break-word;
@@ -86,7 +86,7 @@
   text-align: center;
   color: #fafafa;
   font-size: 16px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   line-height: 24px;
   word-wrap: break-word;
@@ -95,7 +95,6 @@
 .upload-box {
   align-self: stretch;
   height: 200px;
-  background: rgba(0, 0, 0, 0.2);
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -106,7 +105,7 @@
 .upload-icon {
   width: 240px;
   height: 240px;
-  padding: 24px;
+  /* padding: 24px; */
   background: #0e464f;
   border-radius: 32px;
   border: 4px rgba(35.85, 160.11, 181.49, 0.5) solid;
@@ -115,6 +114,8 @@
   justify-content: center;
   align-items: center;
   gap: 16px;
+  position: relative;
+  cursor: pointer;
 }
 
 .upload-text {
@@ -122,10 +123,20 @@
   text-align: center;
   color: #fafafa;
   font-size: 16px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   line-height: 24px;
   word-wrap: break-word;
+}
+
+.uploaded-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%; /* Optional: For circular images */
 }
 
 .divider {
@@ -147,7 +158,7 @@
   align-self: stretch;
   color: #fafafa;
   font-size: 16px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   line-height: 24px;
   word-wrap: break-word;
@@ -176,7 +187,7 @@
   flex: 1;
   color: white;
   font-size: 16px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   line-height: 24px;
   word-wrap: break-word;
@@ -196,7 +207,7 @@
   align-self: stretch;
   color: #fafafa;
   font-size: 16px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   line-height: 24px;
   word-wrap: break-word;
@@ -218,7 +229,7 @@
   flex: 1;
   color: #aaaaaa;
   font-size: 16px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   line-height: 24px;
   word-wrap: break-word;
@@ -232,7 +243,7 @@
   align-items: flex-end;
   gap: 24px;
 }
-  
+
 .error-message {
   color: #ff6b6b;
   font-size: 12px;
@@ -245,11 +256,11 @@ input[type="file"] {
   width: 100%;
   padding: 12px;
   border-radius: 12px;
-  border: 1px solid #07373F;
+  border: 1px solid #07373f;
   background: #052228;
-  color: #FAFAFA;
+  color: #fafafa;
   font-size: 16px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 input[type="file"] {
@@ -452,8 +463,8 @@ input[type="file"] {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-.ticket-card:hover{
-    background: #24a0b5;
+.ticket-card:hover {
+  background: #24a0b5;
 }
 
 .ticket-type {
@@ -539,5 +550,3 @@ input[type="file"] {
   align-items: flex-end;
   gap: 24px;
 }
-
-

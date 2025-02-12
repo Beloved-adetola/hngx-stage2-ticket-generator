@@ -1,24 +1,43 @@
 import { useState } from "react";
-import "./css/TicketSelector.css"; // Import the CSS file
+import "./css/TicketSelector.css";
 
-
-interface TicketSelectorProps{
+interface TicketSelectorProps {
   handleTicketSelector: (ticket: string) => void;
   handleNextStep: () => void;
 }
-const TicketSelection = ({ handleTicketSelector, handleNextStep }: TicketSelectorProps) => {
-    const [ticketError, setTicketError] = useState<string>('');
-  
-  
-    const validateTicket = (value: string): boolean => {
-      if (!value) {
-        setTicketError('Please select a ticket');
-        return false;
-      }
-      setTicketError('');
-      return true;
+
+const TicketSelection = ({
+  handleTicketSelector,
+  handleNextStep,
+}: TicketSelectorProps) => {
+  const [ticketError, setTicketError] = useState<string>("");
+  const [selectedTicket, setSelectedTicket] = useState<string>("");
+  const [, setQuantity] = useState<number>(1);
+
+  const validateTicket = (): boolean => {
+    if (!selectedTicket) {
+      setTicketError("Please select a ticket");
+      return false;
+    }
+    setTicketError("");
+    return true;
   };
-  
+
+  const handleTicketClick = (ticket: string) => {
+    setSelectedTicket(ticket);
+    handleTicketSelector(ticket);
+  };
+
+  const handleQuantityChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setQuantity(Number(e.target.value));
+  };
+
+  const handleNext = () => {
+    if (validateTicket()) {
+      handleNextStep();
+    }
+  };
+
   return (
     <main className="ticket-container">
       <section className="ticket-header">
@@ -77,21 +96,30 @@ const TicketSelection = ({ handleTicketSelector, handleNextStep }: TicketSelecto
         <div className="ticket-options">
           <h3 className="ticket-options-title">Select Ticket Type:</h3>
           <div className="ticket-cards">
-            <button className="ticket-card" onClick={handleTicketSelector}>
+            <button
+              className="ticket-card"
+              onClick={() => handleTicketClick("Free")}
+            >
               <h4 className="ticket-type">Free</h4>
               <div className="ticket-info">
                 <p className="ticket-access">Regular Access</p>
                 <p className="ticket-availability">20/52</p>
               </div>
             </button>
-            <button className="ticket-card" onClick={handleTicketSelector}>
+            <button
+              className="ticket-card"
+              onClick={() => handleTicketClick("VIP")}
+            >
               <h4 className="ticket-type">$150</h4>
               <div className="ticket-info">
                 <p className="ticket-access">VIP Access</p>
                 <p className="ticket-availability">20/52</p>
               </div>
             </button>
-            <button className="ticket-card" onClick={handleTicketSelector}>
+            <button
+              className="ticket-card"
+              onClick={() => handleTicketClick("VVIP")}
+            >
               <h4 className="ticket-type">$150</h4>
               <div className="ticket-info">
                 <p className="ticket-access">VVIP Access</p>
@@ -103,16 +131,28 @@ const TicketSelection = ({ handleTicketSelector, handleNextStep }: TicketSelecto
 
         <div className="ticket-quantity">
           <label className="quantity-label">Number of Tickets</label>
-            <select title="no" className="quantity-input">
-              <option className="quantity-dropdown" value="1">1</option>
-              <option className="quantity-dropdown" value="2">2</option>
-              <option className="quantity-dropdown" value="3">3</option>
-            </select>
-          </div>
-          {ticketError && <p className="error-message">{ticketError}</p>}
+          <select
+            title="no"
+            className="quantity-input"
+            onChange={handleQuantityChange}
+          >
+            <option className="quantity-dropdown" value="1">
+              1
+            </option>
+            <option className="quantity-dropdown" value="2">
+              2
+            </option>
+            <option className="quantity-dropdown" value="3">
+              3
+            </option>
+          </select>
+        </div>
+        {ticketError && <p className="error-message">{ticketError}</p>}
         <div className="ticket-actions">
           <button className="cancel-button">Cancel</button>
-          <button className="next-button" onClick={handleNextStep}>Next</button>
+          <button className="next-button" onClick={handleNext}>
+            Next
+          </button>
         </div>
       </section>
     </main>
