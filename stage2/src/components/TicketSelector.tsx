@@ -162,6 +162,15 @@ const TicketSelection = ({
             <option className="quantity-dropdown" value="3">
               3
             </option>
+            <option className="quantity-dropdown" value="4">
+              4
+            </option>
+            <option className="quantity-dropdown" value="5">
+              5
+            </option>
+            <option className="quantity-dropdown" value="6">
+              6
+            </option>
           </select>
         </div>
         <div className="ticket-actions">
