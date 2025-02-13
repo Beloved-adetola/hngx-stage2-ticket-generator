@@ -17,7 +17,6 @@ const TicketGenerator: React.FC<TicketGeneratorProps> = ({
   ticketType,
   quantity,
 }) => {
-
   const handleBookAnotherTicket = () => {
     // Logic to book another ticket
     window.location.reload(); // Reload the page to start over
@@ -144,7 +143,12 @@ const TicketGenerator: React.FC<TicketGeneratorProps> = ({
                   <h3 className="ready-event-name">Techember Fest ”25</h3>
                   <p>📍 04 Rumens road, Ikoyi, Lagos</p>
                   <p>📅 March 15, 2025 | 7:00 PM</p>
-                  <img className="ready-event-image" src={avatar} alt="Event" crossOrigin="anonymous" />
+                  <img
+                    className="ready-event-image"
+                    src={avatar}
+                    alt="Event"
+                    crossOrigin="anonymous"
+                  />
                 </div>
                 <div className="attendee-info">
                   <div className="info-row">
@@ -174,8 +178,15 @@ const TicketGenerator: React.FC<TicketGeneratorProps> = ({
         </div>
 
         <div className="action-buttons">
-          <button className="book-another-button" onClick={handleBookAnotherTicket}>Book Another Ticket</button>
-          <button className="download-button" onClick={handleDownloadTicket}>Download Ticket</button>
+          <button
+            className="book-another-button"
+            onClick={handleBookAnotherTicket}
+          >
+            Book Another Ticket
+          </button>
+          <button className="download-button" onClick={handleDownloadTicket}>
+            Download Ticket
+          </button>
         </div>
       </section>
     </main>
