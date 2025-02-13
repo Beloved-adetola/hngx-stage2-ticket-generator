@@ -5,16 +5,18 @@ interface TicketSelectorProps {
   handleTicketSelector: (ticket: string) => void;
   handleNextStep: () => void;
   handleCancel: () => void;
+  handleQuantityChange: (quantity: number) => void;
 }
 
 const TicketSelection = ({
   handleTicketSelector,
   handleNextStep,
-  handleCancel
+  handleCancel,
+  handleQuantityChange,
 }: TicketSelectorProps) => {
   const [ticketError, setTicketError] = useState<string>("");
   const [selectedTicket, setSelectedTicket] = useState<string>("");
-  const [, setQuantity] = useState<number>(1);
+  const [quantity, setQuantity] = useState<number>(1);
 
   const validateTicket = (): boolean => {
     if (!selectedTicket) {
@@ -30,8 +32,10 @@ const TicketSelection = ({
     handleTicketSelector(ticket);
   };
 
-  const handleQuantityChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    setQuantity(Number(e.target.value));
+  const handleQuantityChangeLocal = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const newQuantity = Number(e.target.value)
+    setQuantity(newQuantity);
+    handleQuantityChange(newQuantity)
   };
 
   const handleNext = () => {
@@ -130,14 +134,17 @@ const TicketSelection = ({
             </button>
           </div>
         </div>
+        {ticketError && <p className="error-message">{ticketError}</p>}
 
         <div className="ticket-quantity">
           <label className="quantity-label">Number of Tickets</label>
           <select
-            title="no"
+            title="Quantity"
             className="quantity-input"
-            onChange={handleQuantityChange}
+            onChange={handleQuantityChangeLocal}
+            value={quantity}
           >
+            <option className="quantity-dropdown" value=""></option>
             <option className="quantity-dropdown" value="1">
               1
             </option>
@@ -149,7 +156,6 @@ const TicketSelection = ({
             </option>
           </select>
         </div>
-        {ticketError && <p className="error-message">{ticketError}</p>}
         <div className="ticket-actions">
           <button className="cancel-button" onClick={handleCancel}>Cancel</button>
           <button className="next-button" onClick={handleNext}>

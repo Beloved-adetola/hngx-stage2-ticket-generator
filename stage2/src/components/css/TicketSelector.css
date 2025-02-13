@@ -113,7 +113,7 @@
   text-align: center;
 
   /* Text/Regular/Normal */
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -194,16 +194,15 @@
   background: #24a0b5;
 }
 .ticket-card.active {
-  background-color: #12464E;
-  border-color: #24a0b5;
+  background-color: #12464e;
   color: white;
+  border: 1px #197686 solid;
 }
 .ticket-card.active .ticket-type,
 .ticket-card.active .ticket-access,
 .ticket-card.active .ticket-availability {
   color: white;
 }
-
 
 .ticket-type {
   color: white;

@@ -48,3 +48,37 @@ body {
   background: transparent;
   border: 1px solid #24a0b5;
 }
+
+
+
+@media (max-width: 768px) {
+  .attendee-container {
+      width: 90%;
+      height: auto;
+      padding: 24px;
+      gap: 16px;
+  }
+
+  .header-title {
+      font-size: 24px;
+  }
+
+  .header-step {
+      font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .attendee-container {
+      padding: 16px;
+      gap: 8px;
+  }
+
+  .header-title {
+      font-size: 20px;
+  }
+
+  .header-step {
+      font-size: 12px;
+  }
+}

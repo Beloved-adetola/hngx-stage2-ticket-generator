@@ -1,4 +1,5 @@
 import React from "react";
+import html2canvas from "html2canvas";
 import "./css/Ticket.css";
 
 interface TicketGeneratorProps {
@@ -24,7 +25,16 @@ const TicketGenerator: React.FC<TicketGeneratorProps> = ({
 
   const handleDownloadTicket = () => {
     // Logic to download the ticket
-    alert("Downloading ticket...");
+    const ticketElement = document.querySelector(".ticket-wrapper"); // Select the ticket element
+
+    if (ticketElement) {
+      html2canvas(ticketElement as HTMLElement).then((canvas) => {
+        const link = document.createElement("a");
+        link.href = canvas.toDataURL("image/png"); // Convert canvas to image URL
+        link.download = "ticket.png"; // Set the download filename
+        link.click(); // Trigger the download
+      });
+    }
   };
 
   return (
@@ -134,7 +144,7 @@ const TicketGenerator: React.FC<TicketGeneratorProps> = ({
                   <h3 className="ready-event-name">Techember Fest ”25</h3>
                   <p>📍 04 Rumens road, Ikoyi, Lagos</p>
                   <p>📅 March 15, 2025 | 7:00 PM</p>
-                  <img className="ready-event-image" src={avatar} alt="Event" />
+                  <img className="ready-event-image" src={avatar} alt="Event" crossOrigin="anonymous" />
                 </div>
                 <div className="attendee-info">
                   <div className="info-row">
