@@ -113,7 +113,7 @@
   text-align: center;
 
   /* Text/Regular/Normal */
-  font-family: Roboto;
+  font-family: 'Roboto';
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -131,7 +131,7 @@
 .event-separator,
 .event-date {
   color: var(--color-grey-98, #fafafa);
-  font-family: Roboto;
+  font-family: "Roboto";
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -193,6 +193,17 @@
 .ticket-card:hover {
   background: #24a0b5;
 }
+.ticket-card.active {
+  background-color: #12464E;
+  border-color: #24a0b5;
+  color: white;
+}
+.ticket-card.active .ticket-type,
+.ticket-card.active .ticket-access,
+.ticket-card.active .ticket-availability {
+  color: white;
+}
+
 
 .ticket-type {
   color: white;

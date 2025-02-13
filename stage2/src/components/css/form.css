@@ -145,6 +145,7 @@
 }
 
 .input-section {
+  margin-top: 10px;
   align-self: stretch;
   height: 80px;
   display: flex;
@@ -236,6 +237,7 @@
 }
 
 .action-buttons {
+  margin-top: 20px;
   align-self: stretch;
   height: 48px;
   display: inline-flex;

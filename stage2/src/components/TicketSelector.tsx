@@ -4,11 +4,13 @@ import "./css/TicketSelector.css";
 interface TicketSelectorProps {
   handleTicketSelector: (ticket: string) => void;
   handleNextStep: () => void;
+  handleCancel: () => void;
 }
 
 const TicketSelection = ({
   handleTicketSelector,
   handleNextStep,
+  handleCancel
 }: TicketSelectorProps) => {
   const [ticketError, setTicketError] = useState<string>("");
   const [selectedTicket, setSelectedTicket] = useState<string>("");
@@ -97,7 +99,7 @@ const TicketSelection = ({
           <h3 className="ticket-options-title">Select Ticket Type:</h3>
           <div className="ticket-cards">
             <button
-              className="ticket-card"
+              className={`ticket-card ${selectedTicket === "Free" ? "active" : ""}`}
               onClick={() => handleTicketClick("Free")}
             >
               <h4 className="ticket-type">Free</h4>
@@ -107,7 +109,7 @@ const TicketSelection = ({
               </div>
             </button>
             <button
-              className="ticket-card"
+              className={`ticket-card ${selectedTicket === "VIP" ? "active" : ""}`}
               onClick={() => handleTicketClick("VIP")}
             >
               <h4 className="ticket-type">$150</h4>
@@ -117,7 +119,7 @@ const TicketSelection = ({
               </div>
             </button>
             <button
-              className="ticket-card"
+              className={`ticket-card ${selectedTicket === "VVIP" ? "active" : ""}`}
               onClick={() => handleTicketClick("VVIP")}
             >
               <h4 className="ticket-type">$150</h4>
@@ -149,7 +151,7 @@ const TicketSelection = ({
         </div>
         {ticketError && <p className="error-message">{ticketError}</p>}
         <div className="ticket-actions">
-          <button className="cancel-button">Cancel</button>
+          <button className="cancel-button" onClick={handleCancel}>Cancel</button>
           <button className="next-button" onClick={handleNext}>
             Next
           </button>

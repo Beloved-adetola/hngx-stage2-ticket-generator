@@ -16,6 +16,17 @@ const TicketGenerator: React.FC<TicketGeneratorProps> = ({
   ticketType,
   quantity,
 }) => {
+
+  const handleBookAnotherTicket = () => {
+    // Logic to book another ticket
+    window.location.reload(); // Reload the page to start over
+  };
+
+  const handleDownloadTicket = () => {
+    // Logic to download the ticket
+    alert("Downloading ticket...");
+  };
+
   return (
     <main className="ready-container">
       <section className="ready-header">
@@ -153,8 +164,8 @@ const TicketGenerator: React.FC<TicketGeneratorProps> = ({
         </div>
 
         <div className="action-buttons">
-          <button className="book-another-button">Book Another Ticket</button>
-          <button className="download-button">Download Ticket</button>
+          <button className="book-another-button" onClick={handleBookAnotherTicket}>Book Another Ticket</button>
+          <button className="download-button" onClick={handleDownloadTicket}>Download Ticket</button>
         </div>
       </section>
     </main>

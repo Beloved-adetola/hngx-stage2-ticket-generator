@@ -231,7 +231,6 @@
 
 // export default Form;
 
-
 import React, { useState, useEffect } from "react";
 
 // Declare cloudinary on the window object
@@ -246,7 +245,10 @@ declare global {
           multiple: boolean;
           cropping: boolean;
         },
-        callback: (error: Error | null, result: { event: string; info: { secure_url: string } } | null) => void
+        callback: (
+          error: Error | null,
+          result: { event: string; info: { secure_url: string } } | null
+        ) => void
       ) => void;
     };
   }
@@ -333,6 +335,9 @@ const Form: React.FC = () => {
       setStep(2);
     }
   };
+  const handleCancel = () => {
+    setStep(1);
+  };
 
   const openCloudinaryWidget = () => {
     console.log("Opening Cloudinary widget");
@@ -344,7 +349,10 @@ const Form: React.FC = () => {
         multiple: false,
         cropping: true,
       },
-      (error: Error | null, result: { event: string; info: { secure_url: string } } | null) => {
+      (
+        error: Error | null,
+        result: { event: string; info: { secure_url: string } } | null
+      ) => {
         if (error) {
           console.error("Error opening Cloudinary widget: ", error);
         }
@@ -363,6 +371,7 @@ const Form: React.FC = () => {
           <TicketSelection
             handleTicketSelector={handleTicketSelection}
             handleNextStep={handleNextStep}
+            handleCancel={handleCancel}
           />
         )}
 
@@ -397,8 +406,8 @@ const Form: React.FC = () => {
 
             <section className="attendee-details">
               <form onSubmit={handleSubmit}>
-              <div className="upload-section">
-                  <p className="upload-instruction">Upload Profile Photo</p>
+                <div className="upload-section">
+                  <p className="upload-instruction">Upload Profile Photo *</p>
                   <div className="upload-box">
                     <div
                       className="upload-icon"
@@ -441,7 +450,6 @@ const Form: React.FC = () => {
                     )}
                   </div>
                 </div>
-
 
                 <div className="divider">
                   <svg

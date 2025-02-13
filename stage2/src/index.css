@@ -1,3 +1,5 @@
+
+
 body {
   display: flex;
   justify-content: center;
@@ -17,6 +19,7 @@ body {
   border: 1px solid #24a0b5;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  font-family: "JejuMyeongjo", sans-serif;
 }
 .cancel-button:hover,
 .back-button:hover,
@@ -37,6 +40,7 @@ body {
   background: #24a0b5;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  font-family: "JejuMyeongjo", sans-serif;
 }
 .next-button:hover,
 .submit-button:hover,
