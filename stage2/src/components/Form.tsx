@@ -120,7 +120,6 @@ const Form: React.FC = () => {
   };
 
   const openCloudinaryWidget = () => {
-    
     setIsLoading(true);
     console.log("Opening Cloudinary widget");
     console.log(cloudName, uploadPreset);
