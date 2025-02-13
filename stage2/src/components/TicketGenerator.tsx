@@ -67,7 +67,7 @@ const TicketGenerator: React.FC<TicketGeneratorProps> = ({
         <div className="ticket-confirmation">
           <h2 className="confirmation-title">Your Ticket is Booked!</h2>
           <p className="confirmation-description">
-            Check your email for a copy or you can <strong>download</strong>
+            Click the button below to <strong>download</strong>
           </p>
         </div>
 
@@ -75,8 +75,8 @@ const TicketGenerator: React.FC<TicketGeneratorProps> = ({
           <div className="ticket-wrapper">
             <div className="ticket-background">
               <svg
-                width="500px"
-                height="900px"
+                width="400px"
+                height="700px"
                 viewBox="0 0 300 600"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"

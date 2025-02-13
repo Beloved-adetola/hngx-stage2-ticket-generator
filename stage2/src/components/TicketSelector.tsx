@@ -91,7 +91,7 @@ const TicketSelection = ({
 
         <div className="divider">
           <svg
-            width="556"
+            width="100%"
             height="4"
             viewBox="0 0 556 4"
             fill="none"

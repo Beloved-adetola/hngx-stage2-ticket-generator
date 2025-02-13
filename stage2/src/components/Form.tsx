@@ -262,8 +262,18 @@ const Form: React.FC = () => {
                     aria-label="Enter your email"
                     placeholder="beloved@gmail.com"
                   />
+                  <div>
+                    {emailError && (
+                      <p className="error-message">{emailError}</p>
+                    )}
+                  </div>
+                  <div className="input-section">
+                    <label className="input-label">
+                      Enter your request (if any)
+                    </label>
+                    <textarea name="Request" title="Request"></textarea>
+                  </div>
                 </div>
-                {emailError && <p className="error-message">{emailError}</p>}
 
                 <div className="action-buttons">
                   <button

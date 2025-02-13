@@ -12,9 +12,10 @@
   align-items: center;
   gap: 32px;
 }
+
 .attendee-header {
   align-self: stretch;
-  height: 48px;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -33,7 +34,7 @@
 .header-title {
   flex: 1;
   color: white;
-  font-size: 32px;
+  font-size: 24px;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   word-wrap: break-word;
@@ -41,7 +42,7 @@
 
 .header-step {
   color: #fafafa;
-  font-size: 16px;
+  font-size: 14px;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   line-height: 24px;
@@ -54,9 +55,8 @@
 }
 
 .attendee-details {
-  align-self: stretch;
-  height: 907px;
-  padding: 20px;
+  height: auto;
+  padding: 15px;
   background: #08252b;
   border-radius: 32px;
   border: 1px #0e464f solid;
@@ -68,15 +68,15 @@
 }
 
 .upload-section {
-  height: 328px;
-  padding: 24px 24px 48px 24px;
+  height: auto;
+  padding: 24px;
   background: #052228;
   border-radius: 24px;
   border: 1px #07373f solid;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
   gap: 32px;
   margin-bottom: 24px;
 }
@@ -84,7 +84,7 @@
 .upload-instruction {
   text-align: center;
   color: #fafafa;
-  font-size: 16px;
+  font-size: 14px;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   line-height: 24px;
@@ -92,9 +92,9 @@
 }
 
 .upload-box {
-  align-self: stretch;
-  height: 200px;
-  display: inline-flex;
+  width: 80%;
+  height: 120px;
+  display: flex;
   border: 1px dashed #07373f;
   justify-content: center;
   align-items: center;
@@ -108,17 +108,17 @@
 }
 
 .upload-icon {
-  width: 240px;
-  height: 240px;
-  padding: 24px;
+  width: 150px;
+  height: 150px;
+  padding: 12px;
   background: #0e464f;
-  border-radius: 32px;
-  border: 4px rgba(35.85, 160.11, 181.49, 0.5) solid;
+  border-radius: 16px;
+  border: 2px rgba(35.85, 160.11, 181.49, 0.5) solid;
   display: inline-flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 16px;
+  gap: 8px;
   position: relative;
   cursor: pointer;
 }
@@ -127,7 +127,7 @@
   align-self: stretch;
   text-align: center;
   color: #fafafa;
-  font-size: 16px;
+  font-size: 14px;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   line-height: 24px;
@@ -141,15 +141,14 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 32px;
+  border-radius: 16px;
 }
 
-/* Loading Indicator */
 .loading-indicator {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 14px;
+  font-size: 12px;
   color: #24a0b5;
 }
 
@@ -167,12 +166,13 @@
   color: white;
   background-color: rgba(0, 0, 0, 0.493);
   padding: 5px 10px;
-  border-radius: 32px;
+  border-radius: 16px;
   opacity: 0;
   transition: opacity 0.3s ease;
 }
+
 .image-hover-text p {
-  font-size: 16px;
+  font-size: 14px;
   text-align: center;
 }
 
@@ -188,7 +188,7 @@
 .input-section {
   margin-top: 10px;
   align-self: stretch;
-  height: 80px;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -199,7 +199,7 @@
 .input-label {
   align-self: stretch;
   color: #fafafa;
-  font-size: 16px;
+  font-size: 14px;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   line-height: 24px;
@@ -228,7 +228,7 @@
 .email-text {
   flex: 1;
   color: white;
-  font-size: 16px;
+  font-size: 14px;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   line-height: 24px;
@@ -237,7 +237,7 @@
 
 .textarea-section {
   align-self: stretch;
-  height: 159px;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -248,7 +248,7 @@
 .textarea-label {
   align-self: stretch;
   color: #fafafa;
-  font-size: 16px;
+  font-size: 14px;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   line-height: 24px;
@@ -257,7 +257,7 @@
 
 .textarea-box {
   align-self: stretch;
-  height: 127px;
+  height: 100px;
   padding: 12px;
   border-radius: 12px;
   border: 1px #07373f solid;
@@ -270,7 +270,7 @@
 .textarea-placeholder {
   flex: 1;
   color: #aaaaaa;
-  font-size: 16px;
+  font-size: 14px;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   line-height: 24px;
@@ -280,7 +280,7 @@
 .action-buttons {
   margin-top: 20px;
   align-self: stretch;
-  height: 48px;
+  height: auto;
   display: inline-flex;
   justify-content: flex-end;
   align-items: flex-end;
@@ -295,14 +295,15 @@
 
 input[type="text"],
 input[type="email"],
-input[type="file"] {
+input[type="file"],
+textarea {
   width: 100%;
   padding: 12px;
   border-radius: 12px;
   border: 1px solid #07373f;
   background: #052228;
   color: #fafafa;
-  font-size: 16px;
+  font-size: 14px;
   font-family: "Roboto", sans-serif;
 }
 
@@ -314,283 +315,117 @@ input[type="file"] {
   cursor: pointer;
 }
 
-/* TicketSelection */
+@media (max-width: 768px) {
+  .header-title {
+    font-size: 20px;
+  }
 
-.ticket-container {
-  width: 100%;
-  max-width: 800px;
-  height: auto;
-  padding: 5%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
+  .header-step {
+    font-size: 12px;
+  }
+
+  .upload-instruction {
+    font-size: 12px;
+  }
+
+  .upload-text {
+    font-size: 12px;
+  }
+
+  .input-label {
+    font-size: 12px;
+  }
+
+  .textarea-label {
+    font-size: 12px;
+  }
+
+  .email-text {
+    font-size: 12px;
+  }
+
+  .textarea-placeholder {
+    font-size: 12px;
+  }
 }
 
+@media (max-width: 480px) {
+  .header-title {
+    font-size: 18px;
+  }
 
-.ticket-header {
-  height: 48px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 15px;
+  .header-step {
+    font-size: 10px;
+  }
+
+  .upload-instruction {
+    font-size: 10px;
+  }
+
+  .upload-text {
+    font-size: 10px;
+  }
+
+  .input-label {
+    font-size: 10px;
+  }
+
+  .textarea-label {
+    font-size: 10px;
+  }
+
+  .email-text {
+    font-size: 10px;
+  }
+
+  .textarea-placeholder {
+    font-size: 10px;
+  }
 }
+@media (max-width: 320px) {
+  .attendee-container {
+    padding: 10px;
+    gap: 16px;
+  }
 
-.ticket-details {
-  width: 604px;
-  height: 682px;
-  padding: 20px;
-  background: #08252b;
-  border-radius: 32px;
-  border: 1px solid #0e464f;
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 25px;
-}
+  .header-title {
+    font-size: 18px;
+  }
 
-.header-content {
-  align-self: stretch;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 12px;
-  width: 604px;
-}
+  .header-step {
+    font-size: 10px;
+  }
 
-.header-title {
-  align-self: stretch;
-  color: #fff;
-  font-family: JejuMyeongjo;
-  font-size: 30px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
+  .upload-instruction {
+    font-size: 10px;
+  }
 
-.header-step {
-  color: var(--color-grey-98, #fafafa);
-  font-family: Roboto;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 150%; /* 24px */
-}
+  .upload-text {
+    font-size: 10px;
+  }
 
-.progress-bar {
-  position: relative;
-  width: 100%;
-}
+  .input-label {
+    font-size: 10px;
+  }
 
-.event-info {
-  display: flex;
-  height: 180px;
-  padding: 20px;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  align-self: stretch;
-  border-radius: 24px;
-  border-right: 2px solid #07373f;
-  border-bottom: 2px solid #07373f;
-  border-left: 2px solid #07373f;
-  background: radial-gradient(
-      57.42% 106.59% at 14.02% 32.06%,
-      rgba(36, 160, 181, 0.2) 0%,
-      rgba(36, 160, 181, 0) 100%
-    ),
-    rgba(10, 12, 17, 0.1);
-  -webkit-backdrop-filter: blur(7px);
-  backdrop-filter: blur(7px);
-}
-.event-head {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  align-self: stretch;
-}
-.event-title {
-  align-self: stretch;
-  color: var(--color-grey-98, #fafafa);
-  text-align: center;
-  font-family: "Road Rage";
-  font-size: 42px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 100%; /* 62px */
-}
+  .textarea-label {
+    font-size: 10px;
+  }
 
-.event-description {
-  width: 340px;
-  color: var(--color-grey-98, #fafafa);
-  text-align: center;
+  .email-text {
+    font-size: 10px;
+  }
 
-  /* Text/Regular/Normal */
-  font-family: Roboto;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 150%; /* 24px */
-}
+  .textarea-placeholder {
+    font-size: 10px;
+  }
 
-.event-meta {
-  display: inline-flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 16px;
-}
+  .upload-box {
+    height: 100px;
+  }
 
-.event-location,
-.event-separator,
-.event-date {
-  color: var(--color-grey-98, #fafafa);
-  font-family: Roboto;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 150%; /* 24px */
-}
-
-.divider {
-  position: relative;
-  width: 100%;
-}
-
-.ticket-options {
-  align-self: stretch;
-  height: 174px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  gap: 8px;
-}
-
-.ticket-options-title {
-  align-self: stretch;
-  color: var(--color-grey-98, #fafafa);
-
-  /* Text/Regular/Normal */
-  font-family: Roboto;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 150%; /* 24px */
-}
-
-.ticket-cards {
-  display: flex;
-  padding: 16px;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
-  align-self: stretch;
-  border-radius: 24px;
-  border: 1px solid #07373f;
-  background: #052228;
-}
-
-.ticket-card {
-  display: flex;
-  width: 158px;
-  height: 110px;
-  padding: 12px;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 12px;
-  border-radius: 12px;
-  border: 2px solid #197686;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-.ticket-card:hover {
-  background: #24a0b5;
-}
-
-.ticket-type {
-  color: white;
-  font-size: 24px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 600;
-  line-height: 26.4px;
-  word-wrap: break-word;
-}
-
-.ticket-info {
-  align-self: stretch;
-  height: 45px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-}
-
-.ticket-access {
-  color: #fafafa;
-  font-size: 16px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  text-transform: uppercase;
-  line-height: 24px;
-  word-wrap: break-word;
-}
-
-.ticket-availability {
-  color: #d9d9d9;
-  font-size: 14px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  line-height: 21px;
-  word-wrap: break-word;
-}
-
-.ticket-quantity {
-  align-self: stretch;
-  height: 80px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 8px;
-}
-
-.quantity-label {
-  align-self: stretch;
-  color: var(--color-grey-98, #fafafa);
-
-  font-family: Roboto;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 150%;
-}
-
-.quantity-input {
-  display: flex;
-  width: 100%;
-  padding: var(--Radius-reg-2, 12px);
-  align-items: center;
-  gap: var(--Radius-reg, 8px);
-  align-self: stretch;
-  border-radius: var(--Radius-reg-2, 12px);
-  border: 1px solid #07373f;
-  background-color: transparent;
-}
-
-.quantity-dropdown {
-  position: relative;
-  background-color: #052228;
-}
-
-.ticket-actions {
-  align-self: stretch;
-  height: 48px;
-  display: inline-flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  gap: 24px;
+  .upload-icon {
+    width: 80px;
+    height: 80px;
+  }
 }

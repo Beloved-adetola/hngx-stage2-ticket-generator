@@ -1,10 +1,11 @@
 .ticket-container {
-  height: 750px;
-  padding: 48px 30px;
+  width: 100%;
+  height: auto;
+  padding: 24px;
   background: #041e23;
-  border-radius: 40px;
+  border-radius: 24px;
   border: 1px #0e464f solid;
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -12,7 +13,8 @@
 }
 
 .ticket-header {
-  height: 48px;
+  height: auto;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21,16 +23,16 @@
 }
 
 .ticket-details {
-  width: 604px;
-  height: 682px;
+  width: 100%;
+  height: auto;
   padding: 20px;
   background: #08252b;
-  border-radius: 32px;
+  border-radius: 24px;
   border: 1px solid #0e464f;
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   gap: 25px;
 }
 
@@ -40,26 +42,26 @@
   justify-content: space-between;
   align-items: center;
   gap: 12px;
-  width: 604px;
+  width: 100%;
 }
 
 .header-title {
   align-self: stretch;
   color: #fff;
-  font-family: JejuMyeongjo;
-  font-size: 30px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
 }
 
 .header-step {
-  color: var(--color-grey-98, #fafafa);
+  color: #fafafa;
   font-family: Roboto;
-  font-size: 16px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 150%; /* 24px */
+  line-height: 150%;
 }
 
 .progress-bar {
@@ -69,7 +71,7 @@
 
 .event-info {
   display: flex;
-  height: 180px;
+  height: auto;
   padding: 20px;
   flex-direction: column;
   align-items: center;
@@ -88,6 +90,7 @@
   -webkit-backdrop-filter: blur(7px);
   backdrop-filter: blur(7px);
 }
+
 .event-head {
   display: flex;
   flex-direction: column;
@@ -95,28 +98,27 @@
   gap: 8px;
   align-self: stretch;
 }
+
 .event-title {
   align-self: stretch;
-  color: var(--color-grey-98, #fafafa);
+  color: #fafafa;
   text-align: center;
   font-family: "Road Rage";
-  font-size: 42px;
+  font-size: 32px;
   font-style: normal;
   font-weight: 400;
-  line-height: 100%; /* 62px */
+  line-height: 100%;
 }
 
 .event-description {
-  width: 340px;
-  color: var(--color-grey-98, #fafafa);
+  width: 100%;
+  color: #fafafa;
   text-align: center;
-
-  /* Text/Regular/Normal */
   font-family: "Roboto";
-  font-size: 16px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 150%; /* 24px */
+  line-height: 150%;
 }
 
 .event-meta {
@@ -129,22 +131,22 @@
 .event-location,
 .event-separator,
 .event-date {
-  color: var(--color-grey-98, #fafafa);
+  color: #fafafa;
   font-family: "Roboto";
-  font-size: 16px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 150%; /* 24px */
+  line-height: 150%;
 }
 
-.divider {
+.ticket-details .divider {
   position: relative;
   width: 100%;
 }
 
 .ticket-options {
   align-self: stretch;
-  height: 174px;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -154,14 +156,12 @@
 
 .ticket-options-title {
   align-self: stretch;
-  color: var(--color-grey-98, #fafafa);
-
-  /* Text/Regular/Normal */
+  color: #fafafa;
   font-family: Roboto;
-  font-size: 16px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 150%; /* 24px */
+  line-height: 150%;
 }
 
 .ticket-cards {
@@ -178,8 +178,8 @@
 
 .ticket-card {
   display: flex;
-  width: 158px;
-  height: 110px;
+  width: 100%;
+  height: auto;
   padding: 12px;
   flex-direction: column;
   align-items: flex-start;
@@ -189,14 +189,17 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
+
 .ticket-card:hover {
   background: #24a0b5;
 }
+
 .ticket-card.active {
   background-color: #12464e;
   color: white;
   border: 1px #197686 solid;
 }
+
 .ticket-card.active .ticket-type,
 .ticket-card.active .ticket-access,
 .ticket-card.active .ticket-availability {
@@ -205,7 +208,7 @@
 
 .ticket-type {
   color: white;
-  font-size: 24px;
+  font-size: 18px;
   font-family: "Roboto", sans-serif;
   font-weight: 600;
   line-height: 26.4px;
@@ -214,7 +217,7 @@
 
 .ticket-info {
   align-self: stretch;
-  height: 45px;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -223,7 +226,7 @@
 
 .ticket-access {
   color: #fafafa;
-  font-size: 16px;
+  font-size: 14px;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   text-transform: uppercase;
@@ -233,7 +236,7 @@
 
 .ticket-availability {
   color: #d9d9d9;
-  font-size: 14px;
+  font-size: 12px;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   line-height: 21px;
@@ -242,7 +245,7 @@
 
 .ticket-quantity {
   align-self: stretch;
-  height: 80px;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -252,10 +255,9 @@
 
 .quantity-label {
   align-self: stretch;
-  color: var(--color-grey-98, #fafafa);
-
+  color: #fafafa;
   font-family: Roboto;
-  font-size: 16px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
@@ -264,11 +266,11 @@
 .quantity-input {
   display: flex;
   width: 100%;
-  padding: var(--Radius-reg-2, 12px);
+  padding: 12px;
   align-items: center;
-  gap: var(--Radius-reg, 8px);
+  gap: 8px;
   align-self: stretch;
-  border-radius: var(--Radius-reg-2, 12px);
+  border-radius: 12px;
   border: 1px solid #07373f;
   background-color: transparent;
 }
@@ -280,9 +282,116 @@
 
 .ticket-actions {
   align-self: stretch;
-  height: 48px;
+  height: auto;
   display: inline-flex;
   justify-content: flex-end;
   align-items: flex-end;
   gap: 24px;
+}
+
+@media (max-width: 768px) {
+  .header-title {
+    font-size: 20px;
+  }
+
+  .header-step {
+    font-size: 12px;
+  }
+
+  .event-title {
+    font-size: 24px;
+  }
+
+  .event-description {
+    font-size: 12px;
+  }
+
+  .ticket-type {
+    font-size: 16px;
+  }
+
+  .ticket-access {
+    font-size: 12px;
+  }
+
+  .ticket-availability {
+    font-size: 10px;
+  }
+
+  .quantity-label {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-title {
+    font-size: 18px;
+  }
+
+  .header-step {
+    font-size: 10px;
+  }
+
+  .event-title {
+    font-size: 20px;
+  }
+
+  .event-description {
+    font-size: 10px;
+  }
+
+  .ticket-type {
+    font-size: 14px;
+  }
+
+  .ticket-access {
+    font-size: 10px;
+  }
+
+  .ticket-availability {
+    font-size: 8px;
+  }
+
+  .quantity-label {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 425px) {
+  .ticket-container {
+    padding: 0px;
+    width: 100%;
+  }
+
+  .header-title {
+    font-size: 16px;
+  }
+
+  .header-step {
+    font-size: 10px;
+  }
+
+  .event-title {
+    font-size: 18px;
+  }
+
+  .event-description {
+    font-size: 10px;
+  }
+
+  .ticket-type {
+    font-size: 14px;
+  }
+
+  .ticket-access {
+    font-size: 10px;
+  }
+
+  .ticket-availability {
+    font-size: 8px;
+  }
+
+  .quantity-label {
+    font-size: 10px;
+  }
 }
