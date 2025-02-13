@@ -5,12 +5,11 @@ import TicketGenerator from "./TicketGenerator";
 import TicketSelection from "./TicketSelector";
 import { Spinner } from "@chakra-ui/react";
 import ImagePlaceholder from "./ImagePlaceholder";
-import dotenv from "dotenv";
 
 // Load environment variables from .env file
-dotenv.config();
-const cloudName = process.env.CLOUDINARY_CLOUD_NAME || "defaultCloudName";
-const uploadPreset = process.env.CLOUDINARY_UPLOAD_PRESET || "defaultUploadPreset";
+// dotenv.config();
+const cloudName = import.meta.env.VITE_CLOUDINARY_CLOUD_NAME;
+const uploadPreset = import.meta.env.VITE_CLOUDINARY_UPLOAD_PRESET;
 
 
 
@@ -121,8 +120,11 @@ const Form: React.FC = () => {
   };
 
   const openCloudinaryWidget = () => {
+    
     setIsLoading(true);
     console.log("Opening Cloudinary widget");
+    console.log(cloudName, uploadPreset);
+
     window.cloudinary.openUploadWidget(
       {
         cloudName: cloudName,
@@ -262,7 +264,7 @@ const Form: React.FC = () => {
                 {nameError && <p className="error-message">{nameError}</p>}
 
                 <div className="input-section">
-                  <label className="input-label">Enter your email *</label>
+                   <label className="input-label">Enter your email *</label>
                   <input
                     type="email"
                     value={email}
