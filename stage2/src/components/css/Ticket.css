@@ -1,16 +1,13 @@
+
 .ready-container {
   width: 100%;
   max-width: 1000px;
-  padding: 24px;
-  background: #041e23;
-  border-radius: 24px;
-  border: 1px #0e464f solid;
+  padding: 5%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 24px;
-  margin: 10px;
+  gap: 20px;
 }
 
 .ready-header {
@@ -33,7 +30,7 @@
 .ready-header-title {
   color: white;
   font-size: 24px;
-  font-family: "JejuMyeongjo", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   text-align: center;
 }

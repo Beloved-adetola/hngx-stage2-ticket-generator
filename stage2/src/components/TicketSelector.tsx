@@ -32,10 +32,12 @@ const TicketSelection = ({
     handleTicketSelector(ticket);
   };
 
-  const handleQuantityChangeLocal = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const newQuantity = Number(e.target.value)
+  const handleQuantityChangeLocal = (
+    e: React.ChangeEvent<HTMLSelectElement>
+  ) => {
+    const newQuantity = Number(e.target.value);
     setQuantity(newQuantity);
-    handleQuantityChange(newQuantity)
+    handleQuantityChange(newQuantity);
   };
 
   const handleNext = () => {
@@ -103,7 +105,9 @@ const TicketSelection = ({
           <h3 className="ticket-options-title">Select Ticket Type:</h3>
           <div className="ticket-cards">
             <button
-              className={`ticket-card ${selectedTicket === "Free" ? "active" : ""}`}
+              className={`ticket-card ${
+                selectedTicket === "Free" ? "active" : ""
+              }`}
               onClick={() => handleTicketClick("Free")}
             >
               <h4 className="ticket-type">Free</h4>
@@ -113,7 +117,9 @@ const TicketSelection = ({
               </div>
             </button>
             <button
-              className={`ticket-card ${selectedTicket === "VIP" ? "active" : ""}`}
+              className={`ticket-card ${
+                selectedTicket === "VIP" ? "active" : ""
+              }`}
               onClick={() => handleTicketClick("VIP")}
             >
               <h4 className="ticket-type">$150</h4>
@@ -123,7 +129,9 @@ const TicketSelection = ({
               </div>
             </button>
             <button
-              className={`ticket-card ${selectedTicket === "VVIP" ? "active" : ""}`}
+              className={`ticket-card ${
+                selectedTicket === "VVIP" ? "active" : ""
+              }`}
               onClick={() => handleTicketClick("VVIP")}
             >
               <h4 className="ticket-type">$150</h4>
@@ -157,7 +165,9 @@ const TicketSelection = ({
           </select>
         </div>
         <div className="ticket-actions">
-          <button className="cancel-button" onClick={handleCancel}>Cancel</button>
+          <button className="cancel-button" onClick={handleCancel}>
+            Cancel
+          </button>
           <button className="next-button" onClick={handleNext}>
             Next
           </button>
