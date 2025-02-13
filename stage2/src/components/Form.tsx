@@ -5,6 +5,14 @@ import TicketGenerator from "./TicketGenerator";
 import TicketSelection from "./TicketSelector";
 import { Spinner } from "@chakra-ui/react";
 import ImagePlaceholder from "./ImagePlaceholder";
+import dotenv from "dotenv";
+
+// Load environment variables from .env file
+dotenv.config();
+const cloudName = process.env.CLOUDINARY_CLOUD_NAME || "defaultCloudName";
+const uploadPreset = process.env.CLOUDINARY_UPLOAD_PRESET || "defaultUploadPreset";
+
+
 
 declare global {
   interface Window {
@@ -106,6 +114,7 @@ const Form: React.FC = () => {
   };
   const handleCancel = () => {
     setStep(1);
+    window.location.reload();
   };
   const handleQuantityChange = (quantity: number) => {
     setQuantity(quantity);
@@ -116,8 +125,8 @@ const Form: React.FC = () => {
     console.log("Opening Cloudinary widget");
     window.cloudinary.openUploadWidget(
       {
-        cloudName: "dqu6ag1sc",
-        uploadPreset: "beloved_preset",
+        cloudName: cloudName,
+        uploadPreset: uploadPreset,
         sources: ["local", "url", "camera"],
         multiple: false,
         cropping: true,
@@ -139,7 +148,7 @@ const Form: React.FC = () => {
   };
 
   return (
-    <CloudinaryContext cloudName="dqu6ag1sc">
+    <CloudinaryContext cloudName={cloudName}>
       <main className="attendee-container">
         {step === 1 && (
           <TicketSelection
@@ -261,7 +270,7 @@ const Form: React.FC = () => {
                     onBlur={() => validateEmail(email)}
                     aria-label="Enter your email"
                     placeholder="beloved@gmail.com"
-                  />
+                />
                   <div>
                     {emailError && (
                       <p className="error-message">{emailError}</p>
