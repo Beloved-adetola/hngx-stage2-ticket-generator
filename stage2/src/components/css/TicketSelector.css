@@ -195,7 +195,7 @@
 }
 
 .ticket-card.active {
-  background-color: #12464e;
+  background-color: #065e6b;
   color: white;
   border: 1px #197686 solid;
 }
@@ -226,7 +226,7 @@
 
 .ticket-access {
   color: #fafafa;
-  font-size: 14px;
+  font-size: 13px;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   text-transform: uppercase;

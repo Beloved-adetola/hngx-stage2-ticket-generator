@@ -55,7 +55,7 @@ const TicketSelection = ({
         </div>
         <div className="progress-bar">
           <svg
-            width="604"
+            width="100%"
             height="4"
             viewBox="0 0 604 4"
             fill="none"
@@ -105,6 +105,7 @@ const TicketSelection = ({
           <h3 className="ticket-options-title">Select Ticket Type:</h3>
           <div className="ticket-cards">
             <button
+              type="button"
               className={`ticket-card ${
                 selectedTicket === "Free" ? "active" : ""
               }`}
@@ -117,6 +118,7 @@ const TicketSelection = ({
               </div>
             </button>
             <button
+              type="button"
               className={`ticket-card ${
                 selectedTicket === "VIP" ? "active" : ""
               }`}
@@ -129,6 +131,7 @@ const TicketSelection = ({
               </div>
             </button>
             <button
+              type="button"
               className={`ticket-card ${
                 selectedTicket === "VVIP" ? "active" : ""
               }`}
@@ -152,7 +155,6 @@ const TicketSelection = ({
             onChange={handleQuantityChangeLocal}
             value={quantity}
           >
-            <option className="quantity-dropdown" value=""></option>
             <option className="quantity-dropdown" value="1">
               1
             </option>
@@ -174,10 +176,10 @@ const TicketSelection = ({
           </select>
         </div>
         <div className="ticket-actions">
-          <button className="cancel-button" onClick={handleCancel}>
+          <button className="cancel-button" onClick={handleCancel} type="button">
             Cancel
           </button>
-          <button className="next-button" onClick={handleNext}>
+          <button className="next-button" onClick={handleNext} type="button">
             Next
           </button>
         </div>

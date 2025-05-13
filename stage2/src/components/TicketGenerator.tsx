@@ -53,11 +53,8 @@ const TicketGenerator: React.FC<TicketGeneratorProps> = ({
           >
             <path
               d="M0 2C0 0.895431 0.895431 0 2 0H602C603.105 0 604 0.895431 604 2C604 3.10457 603.105 4 602 4H2.00001C0.895441 4 0 3.10457 0 2Z"
-              fill="#0E464F"
-            />
-            <path
-              d="M0 2C0 0.895431 0.895431 0 2 0H230C231.105 0 232 0.895431 232 2C232 3.10457 231.105 4 230 4H2C0.895428 4 0 3.10457 0 2Z"
               fill="#24A0B5"
+              width="100%"
             />
           </svg>
         </div>
@@ -179,12 +176,13 @@ const TicketGenerator: React.FC<TicketGeneratorProps> = ({
 
         <div className="action-buttons">
           <button
+            type="button"
             className="book-another-button"
             onClick={handleBookAnotherTicket}
           >
             Book Another Ticket
           </button>
-          <button className="download-button" onClick={handleDownloadTicket}>
+          <button className="download-button" onClick={handleDownloadTicket} type="button">
             Download Ticket
           </button>
         </div>

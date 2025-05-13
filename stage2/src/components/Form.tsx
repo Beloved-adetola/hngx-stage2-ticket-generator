@@ -11,8 +11,6 @@ import ImagePlaceholder from "./ImagePlaceholder";
 const cloudName = import.meta.env.VITE_CLOUDINARY_CLOUD_NAME;
 const uploadPreset = import.meta.env.VITE_CLOUDINARY_UPLOAD_PRESET;
 
-
-
 declare global {
   interface Window {
     cloudinary: {
@@ -169,7 +167,7 @@ const Form: React.FC = () => {
               </div>
               <div className="progress-bar">
                 <svg
-                  width="604"
+                  width="100%"
                   height="4"
                   viewBox="0 0 604 4"
                   fill="none"
@@ -263,7 +261,7 @@ const Form: React.FC = () => {
                 {nameError && <p className="error-message">{nameError}</p>}
 
                 <div className="input-section">
-                   <label className="input-label">Enter your email *</label>
+                  <label className="input-label">Enter your email *</label>
                   <input
                     type="email"
                     value={email}
@@ -271,7 +269,7 @@ const Form: React.FC = () => {
                     onBlur={() => validateEmail(email)}
                     aria-label="Enter your email"
                     placeholder="beloved@gmail.com"
-                />
+                  />
                   <div>
                     {emailError && (
                       <p className="error-message">{emailError}</p>
